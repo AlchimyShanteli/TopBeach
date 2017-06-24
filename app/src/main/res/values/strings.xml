@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Top Beach</string>
+    <string name="name_country">Country: \t</string>
+    <string name="island_country">Island: \t</string>
+    <string name="city_name">City: \t</string>
+    <string name="beach_name">Beach: \t</string>
+    <string name="beach_description">Beach Description: \t</string>
+    <string name="add_record">Add</string>
+    <string name="delete_record">Delete</string>
+    <string name="back_btn">Back</string>
+</resources>
