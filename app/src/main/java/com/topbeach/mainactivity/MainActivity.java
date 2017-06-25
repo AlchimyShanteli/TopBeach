@@ -1,7 +1,6 @@
 package com.topbeach.mainactivity;
 
 import android.os.Bundle;
-
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,7 +12,9 @@ import com.topbeach.R;
 import com.topbeach.adapters.BeachAdapter;
 import com.topbeach.parsers.FileParser;
 import com.topbeach.repository.DbRepository;
+
 import java.io.IOException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
         private int fieldCode;
     }
+
 
 
 }

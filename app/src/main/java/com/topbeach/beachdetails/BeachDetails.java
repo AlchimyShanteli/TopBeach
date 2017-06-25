@@ -2,13 +2,19 @@ package com.topbeach.beachdetails;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.graphics.Palette;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.topbeach.R;
 import com.topbeach.adapters.BeachAdapter;
 
@@ -23,6 +29,7 @@ public class BeachDetails extends Activity {
     private TextView beachName;
     private  TextView beachDescription;
     private ImageView beachImage;
+    private LinearLayout beachDetailContainer;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +42,7 @@ public class BeachDetails extends Activity {
         beachName = (TextView) findViewById(R.id.beachName);
         beachDescription = (TextView) findViewById(R.id.beachDescription);
         beachImage = (ImageView) findViewById(R.id.beachImage);
+        beachDetailContainer = (LinearLayout) findViewById(R.id.beachDetailContainer);
 
         countryName.setText(getIntent().getStringExtra("country"));
         islandName.setText(getIntent().getStringExtra("island"));
@@ -45,6 +53,18 @@ public class BeachDetails extends Activity {
 
         Glide.with(this).load(imageUrl)
                 .into(beachImage);
+
+        Glide.with(this).load(imageUrl)
+                .asBitmap()
+                .into(new SimpleTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                        Palette palette = Palette.from(resource).generate();
+                        beachDetailContainer.setBackgroundColor(palette
+                                .getLightMutedColor(ContextCompat.getColor(BeachDetails.this, R.color.colorAccent)));
+                    }
+                });
+
 
     }
     public void onBack(View v) {

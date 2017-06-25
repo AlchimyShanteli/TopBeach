@@ -8,55 +8,53 @@
     android:onClick="onBack"
     app:cardCornerRadius="5dp">
 
+
     <LinearLayout
+        android:id="@+id/beachDetailContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/countryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/islandName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/beachName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/beachDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/beachImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/countryName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/back_btn" />
 
 
-            <TextView
-                android:id="@+id/islandName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/cityName"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
-
-            <TextView
-                android:id="@+id/beachName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/beachDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <ImageView
-                android:id="@+id/beachImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/back_btn" />
-
-
-        </LinearLayout>
     </LinearLayout>
+
 </android.support.v7.widget.CardView>
