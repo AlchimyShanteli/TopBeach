@@ -34,7 +34,7 @@ public class BeachDetails extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beach_details);
+        setContentView(R.layout.beach_detail_layout);
 
         countryName = (TextView) findViewById(R.id.countryName);
         islandName = (TextView) findViewById(R.id.islandName);

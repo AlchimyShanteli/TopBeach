@@ -37,7 +37,7 @@ public class BeachAdapter extends RecyclerView.Adapter<BeachAdapter.BeachViewHol
     @Override
     public BeachViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         context = parent.getContext();
-        View view = LayoutInflater.from(context).inflate(R.layout.item_activity, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_layout, parent, false);
         return new BeachViewHolder(view);
     }
 
